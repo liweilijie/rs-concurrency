@@ -1,3 +1,6 @@
+/// 注意，上面的代码我们混用了 #[tokio::main] 和 futures:executor::block_on，
+/// 这只是为了展示 Future 使用的不同方式，在正式代码里，不建议混用不同的 executor，会降低程序的性能，
+/// 还可能引发奇怪的问题。
 use futures::executor::block_on;
 use std::future::Future;
 use std::process::Output;
